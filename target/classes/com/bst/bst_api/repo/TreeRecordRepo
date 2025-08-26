@@ -1,0 +1,7 @@
+package com.bst.api.repository;
+
+import com.bst.api.entity.TreeRecord;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TreeRecordRepository extends JpaRepository<TreeRecord, Long> {
+}
