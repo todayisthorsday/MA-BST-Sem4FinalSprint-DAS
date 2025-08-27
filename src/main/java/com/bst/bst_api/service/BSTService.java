@@ -28,13 +28,26 @@ public class BSTService {
         return root;
     }
 
-    public BSTNode buildBST(List<Integer> nums) {
-        BSTNode root = null;
-        for (int n : nums) {
-            root = insert(root, n);
-        }
-        return root;
-    }
+public BSTNode buildBalancedBST(List<Integer> nums) {
+    if (nums.isEmpty()) return null;
+
+    // Sort numbers first
+    Collections.sort(nums);
+    return buildBalancedHelper(nums, 0, nums.size() - 1);
+}
+
+private BSTNode buildBalancedHelper(List<Integer> nums, int start, int end) {
+    if (start > end) return null;
+
+    int mid = (start + end) / 2;
+    BSTNode node = new BSTNode(nums.get(mid));
+
+    node.setLeft(buildBalancedHelper(nums, start, mid - 1));
+    node.setRight(buildBalancedHelper(nums, mid + 1, end));
+
+    return node;
+}
+
 
     // simple map structure to be JSON-friendly
     public Map<String, Object> toMap(BSTNode node) {

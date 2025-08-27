@@ -24,7 +24,7 @@ public class TreeController {
     public Map<String, Object> process(@RequestBody Map<String, String> body) {
         String numbers = body.get("numbers");
         List<Integer> nums = bstService.parseInput(numbers);
-        BSTNode root = bstService.buildBST(nums);
+        BSTNode root = bstService.buildBalancedBST(nums);
         Map<String, Object> treeJson = bstService.toMap(root);
 
         TreeRecord rec = new TreeRecord();
