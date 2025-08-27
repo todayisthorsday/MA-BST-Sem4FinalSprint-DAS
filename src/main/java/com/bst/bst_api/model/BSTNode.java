@@ -1,4 +1,4 @@
-package com.bst.api.model;
+package com.bst.bst_api.model;
 
 public class BSTNode {
     private int value;

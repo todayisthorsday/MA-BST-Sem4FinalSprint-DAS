@@ -1,4 +1,4 @@
-package com.bst.api.entity;
+package com.bst.bst_api.entity;
 
 import jakarta.persistence.*;
 import java.time.Instant;

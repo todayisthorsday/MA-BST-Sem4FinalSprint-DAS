@@ -1,6 +1,6 @@
-package com.bst.api.service;
+package com.bst.bst_api.service;
 
-import com.bst.api.model.BSTNode;
+import com.bst.bst_api.model.BSTNode;
 import org.springframework.stereotype.Service;
 import java.util.*;
 

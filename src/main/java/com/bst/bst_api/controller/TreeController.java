@@ -1,9 +1,9 @@
-package com.bst.api.controller;
+package com.bst.bst_api.controller;
 
-import com.bst.api.entity.TreeRecord;
-import com.bst.api.repository.TreeRecordRepository;
-import com.bst.api.service.BSTService;
-import com.bst.api.model.BSTNode;
+import com.bst.bst_api.entity.TreeRecord;
+import com.bst.bst_api.repo.TreeRecordRepo;
+import com.bst.bst_api.service.BSTService;
+import com.bst.bst_api.model.BSTNode;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -13,9 +13,9 @@ import java.util.*;
 public class TreeController {
 
     private final BSTService bstService;
-    private final TreeRecordRepository repo;
+    private final TreeRecordRepo repo;
 
-    public TreeController(BSTService bstService, TreeRecordRepository repo) {
+    public TreeController(BSTService bstService, TreeRecordRepo repo) {
         this.bstService = bstService;
         this.repo = repo;
     }
